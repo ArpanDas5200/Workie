@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <style>
+        #page-gravure {
+            text-align: center;
+            background-color: aqua;
+            border: 2px solid black;
+        }
+        
+        .slides-show {
+            margin: auto;
+        }
+        
+        .slides-show img {
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div id="page-gravure">
+            <div class="sliders">
+                <div class="slides-show ">
+                    <div><img src="../admin/upload/formalshoes(6).jpg" alt=""></div>
+                    <div><img src="../admin/upload/download (3).jpg" alt=""></div>
+                    <div><img src="../admin/upload/download (5).jpg" alt=""></div>
+                    <div><img src="../admin/upload/suits(6).jpg" alt=""></div>
+                    <div><img src="../admin/upload/tuxedo(7).jpg" alt=""></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('.slides-show').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                fade: true,
+                cssEase: 'linear',
+                autoplay: true,
+                autoplaySpeed: 2000,
+                adaptiveHeight: true
+            });
+        });
+    </script>
+
+</body>
+
+</html>

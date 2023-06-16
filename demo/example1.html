@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jquery validation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.js"></script>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <!-- <script src="validate.js"></script> -->
+</head>
+
+<body>
+    <form method="post" id="signupForm">
+        <fieldset>
+            <legend>Sign - up form</legend>
+            <div style="margin-bottom: 10px;" id="div">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name">
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+
+            <div>
+                <label for="email">Password:</label>
+                <input type="password" id="password" name="password">
+            </div>
+            <input type="submit" name="submit" id="submit" value="submit">
+        </fieldset>
+    </form>
+
+
+
+
+    <script>
+        $(document).ready(function() {
+            alert("asdasd");
+            $('#signupForm').validate({
+                rules: {
+                    name: "required",
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    password: {
+                        required: true,
+                        minlength: 5
+                    }
+                },
+                messages: {
+                    name: "Fill name",
+                    password: {
+                        required: "Fill the password",
+                        minlength: "Your password must be of minimum 5 charaters long"
+                    }
+                }
+            });
+
+            //$("#signupForm").valid();
+
+            /*$('#signupForm').on('click', '#submit', function(e) {
+
+            });*/
+
+
+        });
+    </script>
+</body>
+
+</html>
